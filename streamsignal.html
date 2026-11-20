@@ -507,12 +507,13 @@
           <span class="kicker">Stay in the current</span>
           <h2 class="panel-title">Get the next River Report</h2>
           <p>About two reports a month, plus the occasional foundation piece. No spam, no daily noise — just the river, when it has something to say.</p>
-          <form id="subForm" novalidate>
+          <form id="subForm" method="post" action="https://buttondown.com/api/emails/embed-subscribe/hydrosignal" novalidate>
             <label for="email" class="mono" style="position:absolute;left:-9999px">Email address</label>
             <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
             <button class="btn btn-primary" type="submit">Join the list</button>
           </form>
           <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          <p style="font-size:.78rem;color:var(--muted);margin:2px 0 0"><a href="https://buttondown.com/refer/hydrosignal" target="_blank" rel="noopener" style="color:var(--muted)">Powered by Buttondown.</a></p>
           <p style="font-size:.84rem;color:var(--muted);margin:6px 0 0">For partners — watershed groups, schools, and local organizations interested in introductions or classroom use are welcome to reach out through the same list at launch.</p>
         </div>
         <div>
@@ -623,18 +624,19 @@
   });
   setSeries('flow');
 
-  // Subscribe form — honest mockup behavior
+  // Subscribe form — posts to the HydroSignal list on Buttondown.
+  // The script only guards against an obviously invalid address;
+  // a valid submit goes through to Buttondown, which confirms by email.
   var form = document.getElementById('subForm');
   var msg = document.getElementById('formMsg');
   form.addEventListener('submit', function(e){
-    e.preventDefault();
     var email = document.getElementById('email').value.trim();
-    if(!email || email.indexOf('@') < 1){
+    if(!email || email.indexOf('@') < 1 || email.indexOf('.') < 0){
+      e.preventDefault();
       msg.textContent = 'Please enter a valid email address.';
       return;
     }
-    msg.textContent = 'Thanks — you\u2019re noted for launch. Subscriptions open when the first River Report publishes; nothing is sent before then.';
-    form.reset();
+    msg.textContent = 'Joining the list — Buttondown will ask you to confirm by email.';
   });
 })();
 </script>
