@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5.5' fill='%23084a75'/%3E%3Cpath d='M12 3.1c0 0-5.7 6.5-5.7 10.3a5.7 5.7 0 1 0 11.4 0C17.7 9.6 12 3.1 12 3.1Z' fill='white'/%3E%3Ccircle cx='12' cy='15.6' r='1.05' fill='%23084a75'/%3E%3Cpath d='M10.13 13.73a2.65 2.65 0 0 1 3.74 0' stroke='%23084a75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8.82 12.42a4.5 4.5 0 0 1 6.36 0' stroke='%23084a75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.9c0 0-5.9 6.7-5.9 10.6a5.9 5.9 0 1 0 11.8 0C17.9 9.6 12 2.9 12 2.9Z' fill='%230b6fa4'/%3E%3Ccircle cx='12' cy='15.7' r='1.1' fill='white'/%3E%3Cpath d='M10.09 13.79a2.7 2.7 0 0 1 3.82 0' stroke='white' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8.78 12.48a4.55 4.55 0 0 1 6.44 0' stroke='white' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
 <title>HydroSignal — River Research, Translated. Advocacy That Follows.</title>
 <meta name="description" content="HydroSignal is a youth-led project built on a student's streamflow research: field reports that translate river data into plain language, and the advocacy that grows out of that research." />
 <link rel="canonical" href="https://hydrosignal.org/" />
@@ -72,8 +72,7 @@
   header{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-  .brand-mark{width:40px;height:40px;border-radius:11px;background:var(--teal-ink);display:grid;place-items:center;flex:none}
-  @media (prefers-color-scheme: dark){.brand-mark{background:var(--teal)}}
+  .brand-mark{width:40px;height:40px;display:grid;place-items:center;flex:none;background:transparent}
   .brand b{font-family:"IBM Plex Serif",serif;font-size:1.25rem;letter-spacing:-.02em;line-height:1}
   .brand small{display:block;font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
   .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
@@ -247,7 +246,7 @@
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="HydroSignal home">
       <span class="brand-mark" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2.9c0 0-5.9 6.7-5.9 10.6a5.9 5.9 0 1 0 11.8 0C17.9 9.6 12 2.9 12 2.9Z" fill="#fff"/><circle cx="12" cy="15.7" r="1.1" fill="#084a75"/><path d="M10.09 13.79a2.7 2.7 0 0 1 3.82 0" stroke="#084a75" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M8.78 12.48a4.55 4.55 0 0 1 6.44 0" stroke="#084a75" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none"><path d="M12 2.9c0 0-5.9 6.7-5.9 10.6a5.9 5.9 0 1 0 11.8 0C17.9 9.6 12 2.9 12 2.9Z" style="fill:var(--teal)"/><circle cx="12" cy="15.7" r="1.1" fill="#fff"/><path d="M10.09 13.79a2.7 2.7 0 0 1 3.82 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M8.78 12.48a4.55 4.55 0 0 1 6.44 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
       </span>
       <span><b>HydroSignal</b><small>River Research · Advocacy</small></span>
     </a>
@@ -508,12 +507,13 @@
           <span class="kicker">Stay in the current</span>
           <h2 class="panel-title">Get the next River Report</h2>
           <p>About two reports a month, plus the occasional foundation piece. No spam, no daily noise — just the river, when it has something to say.</p>
-          <form id="subForm" novalidate>
+          <form id="subForm" method="post" action="https://buttondown.com/api/emails/embed-subscribe/hydrosignal" novalidate>
             <label for="email" class="mono" style="position:absolute;left:-9999px">Email address</label>
             <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
             <button class="btn btn-primary" type="submit">Join the list</button>
           </form>
           <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          <p style="font-size:.78rem;color:var(--muted);margin:2px 0 0"><a href="https://buttondown.com/refer/hydrosignal" target="_blank" rel="noopener" style="color:var(--muted)">Powered by Buttondown.</a></p>
           <p style="font-size:.84rem;color:var(--muted);margin:6px 0 0">For partners — watershed groups, schools, and local organizations interested in introductions or classroom use are welcome to reach out through the same list at launch.</p>
         </div>
         <div>
@@ -624,18 +624,19 @@
   });
   setSeries('flow');
 
-  // Subscribe form — honest mockup behavior
+  // Subscribe form — posts to the HydroSignal list on Buttondown.
+  // The script only guards against an obviously invalid address;
+  // a valid submit goes through to Buttondown, which confirms by email.
   var form = document.getElementById('subForm');
   var msg = document.getElementById('formMsg');
   form.addEventListener('submit', function(e){
-    e.preventDefault();
     var email = document.getElementById('email').value.trim();
-    if(!email || email.indexOf('@') < 1){
+    if(!email || email.indexOf('@') < 1 || email.indexOf('.') < 0){
+      e.preventDefault();
       msg.textContent = 'Please enter a valid email address.';
       return;
     }
-    msg.textContent = 'Thanks — you\u2019re noted for launch. Subscriptions open when the first River Report publishes; nothing is sent before then.';
-    form.reset();
+    msg.textContent = 'Joining the list — Buttondown will ask you to confirm by email.';
   });
 })();
 </script>
