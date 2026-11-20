@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5.5' fill='%23084a75'/%3E%3Cpath d='M12 3.1c0 0-5.7 6.5-5.7 10.3a5.7 5.7 0 1 0 11.4 0C17.7 9.6 12 3.1 12 3.1Z' fill='white'/%3E%3Ccircle cx='12' cy='15.6' r='1.05' fill='%23084a75'/%3E%3Cpath d='M10.13 13.73a2.65 2.65 0 0 1 3.74 0' stroke='%23084a75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8.82 12.42a4.5 4.5 0 0 1 6.36 0' stroke='%23084a75' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
 <title>HydroSignal — River Research, Translated. Advocacy That Follows.</title>
 <meta name="description" content="HydroSignal is a youth-led project built on a student's streamflow research: field reports that translate river data into plain language, and the advocacy that grows out of that research." />
 <link rel="canonical" href="https://hydrosignal.org/" />
@@ -20,41 +20,41 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#edf2ee;
-    --bg-2:#e2eae4;
+    --bg:#e9f3f9;
+    --bg-2:#d7e9f3;
     --surface:#ffffff;
-    --surface-2:#f6f8f6;
-    --ink:#13201d;
-    --ink-2:#3f554f;
-    --muted:#63766f;
-    --line:#cfdcd4;
-    --teal:#0c6656;
-    --teal-ink:#0a4f43;
-    --teal-bright:#12967e;
-    --river:#176f7d;
-    --signal:#c97a12;
-    --signal-bg:#fdf3e0;
-    --good:#0c6656;
+    --surface-2:#f1f7fb;
+    --ink:#0c2436;
+    --ink-2:#33566b;
+    --muted:#5d7c8f;
+    --line:#c2d9e7;
+    --teal:#0b6fa4;
+    --teal-ink:#084a75;
+    --teal-bright:#17a2d8;
+    --river:#1b87b8;
+    --signal:#0a7ca8;
+    --signal-bg:#e1f3fa;
+    --good:#0b6fa4;
     --warn:#b45309;
     --radius:18px;
-    --shadow:0 12px 32px rgba(10,79,67,.12);
+    --shadow:0 12px 32px rgba(8,74,117,.13);
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#0c1512;
-      --bg-2:#101d19;
-      --surface:#15241f;
-      --surface-2:#182a24;
-      --ink:#e8f0ec;
-      --ink-2:#b9cdc4;
-      --muted:#8aa198;
-      --line:#2a3f38;
-      --teal:#2db894;
-      --teal-ink:#7ed9c2;
-      --teal-bright:#2db894;
-      --river:#4db3c2;
-      --signal:#e8a33d;
-      --signal-bg:#2b2110;
+      --bg:#061824;
+      --bg-2:#0a2133;
+      --surface:#0d2a40;
+      --surface-2:#11334d;
+      --ink:#e7f3fa;
+      --ink-2:#b2cede;
+      --muted:#7ea4ba;
+      --line:#1e4258;
+      --teal:#38b6e8;
+      --teal-ink:#8fd8f7;
+      --teal-bright:#38b6e8;
+      --river:#4fc3e8;
+      --signal:#45c8ee;
+      --signal-bg:#0d2f42;
       --shadow:0 12px 32px rgba(0,0,0,.35);
     }
   }
@@ -82,8 +82,8 @@
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:48px}
   .btn-primary{background:var(--teal-ink);color:#fff}
   .nav-links a.btn-primary{color:#fff}
-  @media (prefers-color-scheme: dark){.nav-links a.btn-primary{color:#08130f}}
-  @media (prefers-color-scheme: dark){.btn-primary{background:var(--teal);color:#08130f}}
+  @media (prefers-color-scheme: dark){.nav-links a.btn-primary{color:#062638}}
+  @media (prefers-color-scheme: dark){.btn-primary{background:var(--teal);color:#062638}}
   .btn-primary:hover{filter:brightness(1.08)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
   .btn-ghost:hover{border-color:var(--teal)}
@@ -95,8 +95,8 @@
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--teal-ink);background:var(--surface);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
-  .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 0 0 rgba(18,150,126,.5);animation:pulse 2.2s infinite}
-  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(18,150,126,0)}100%{box-shadow:0 0 0 0 rgba(18,150,126,0)}}
+  .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 0 0 rgba(23,162,216,.5);animation:pulse 2.2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(23,162,216,0)}100%{box-shadow:0 0 0 0 rgba(23,162,216,0)}}
   @media (prefers-reduced-motion: reduce){.pulse-dot{animation:none}}
   h1{font-family:"IBM Plex Serif",serif;font-size:clamp(2.4rem,5.2vw,4rem);line-height:1.02;letter-spacing:-.025em;margin:18px 0 16px;font-weight:600}
   h1 em{font-style:italic;color:var(--teal-ink)}
@@ -136,7 +136,7 @@
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
   .filter-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:10px 16px;font-weight:600;font-size:.88rem;cursor:pointer;min-height:44px}
   .filter-btn[aria-pressed="true"]{background:var(--teal-ink);color:#fff;border-color:var(--teal-ink)}
-  @media (prefers-color-scheme: dark){.filter-btn[aria-pressed="true"]{background:var(--teal);color:#08130f;border-color:var(--teal)}}
+  @media (prefers-color-scheme: dark){.filter-btn[aria-pressed="true"]{background:var(--teal);color:#062638;border-color:var(--teal)}}
   .reports{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media(max-width:960px){.reports{grid-template-columns:1fr 1fr}}
   @media(max-width:620px){.reports{grid-template-columns:1fr}}
@@ -207,7 +207,7 @@
   .ws p{margin:3px 0 0;color:var(--ink-2);font-size:.9rem}
   .founder{display:flex;gap:16px;align-items:flex-start}
   .avatar{width:64px;height:64px;border-radius:50%;background:var(--teal-ink);color:#fff;display:grid;place-items:center;font-family:"IBM Plex Serif",serif;font-size:1.4rem;font-weight:700;flex:none}
-  @media (prefers-color-scheme: dark){.avatar{background:var(--teal);color:#08130f}}
+  @media (prefers-color-scheme: dark){.avatar{background:var(--teal);color:#062638}}
   .panel p{color:var(--ink-2);font-size:.95rem}
   .checklist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px;font-size:.92rem}
   .checklist li{padding-left:26px;position:relative;color:var(--ink-2)}
@@ -215,16 +215,16 @@
   .checklist li::after{content:"✓";position:absolute;left:3px;top:1px;font-size:.68rem;color:#fff;font-weight:700}
 
   /* Sponsor / support */
-  .support{background:var(--teal-ink);color:#eaf5f1;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-  @media (prefers-color-scheme: dark){.support{background:#123f35}}
+  .support{background:var(--teal-ink);color:#e9f4fb;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+  @media (prefers-color-scheme: dark){.support{background:#0c3350}}
   @media(max-width:860px){.support{grid-template-columns:1fr}}
   .support h2{font-family:"IBM Plex Serif",serif;font-size:clamp(1.6rem,3vw,2.1rem);margin:8px 0 10px;line-height:1.15;color:#fff}
-  .support p{color:#cfe6dd;margin:0 0 12px}
-  .support .kicker{color:#8fd8c3}
+  .support p{color:#c9e2f2;margin:0 0 12px}
+  .support .kicker{color:#8fd0f0}
   .model-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px}
   .model-card h3{margin:0 0 10px;font-size:1rem;color:#fff}
-  .model-card ul{margin:0;padding-left:18px;color:#d7ece4;font-size:.92rem;display:grid;gap:7px}
-  .status-pill{display:inline-block;margin-top:14px;background:#fff;color:#0a4f43;font-weight:700;font-size:.84rem;padding:9px 14px;border-radius:999px}
+  .model-card ul{margin:0;padding-left:18px;color:#d5e9f6;font-size:.92rem;display:grid;gap:7px}
+  .status-pill{display:inline-block;margin-top:14px;background:#fff;color:#084a75;font-weight:700;font-size:.84rem;padding:9px 14px;border-radius:999px}
 
   /* Subscribe + FAQ */
   .subscribe{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -247,7 +247,7 @@
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="HydroSignal home">
       <span class="brand-mark" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 14c2.5 0 2.5-2 5-2s2.5 4 5 4 2.5-9 5-9 2.5 5 5 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2.9c0 0-5.9 6.7-5.9 10.6a5.9 5.9 0 1 0 11.8 0C17.9 9.6 12 2.9 12 2.9Z" fill="#fff"/><circle cx="12" cy="15.7" r="1.1" fill="#084a75"/><path d="M10.09 13.79a2.7 2.7 0 0 1 3.82 0" stroke="#084a75" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M8.78 12.48a4.55 4.55 0 0 1 6.44 0" stroke="#084a75" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
       </span>
       <span><b>HydroSignal</b><small>River Research · Advocacy</small></span>
     </a>
@@ -294,7 +294,7 @@
             <div><span>Water clarity</span><b>Brown / turbid</b></div>
             <div><span>Field check</span><b>Debris line + bank erosion</b></div>
           </div>
-          <svg class="wave" viewBox="0 0 320 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 C30 22 38 8 60 8 C82 8 88 26 112 26 C136 26 142 4 168 4 C194 4 200 24 226 24 C252 24 258 12 284 12 L320 12" fill="none" stroke="#0c6656" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <svg class="wave" viewBox="0 0 320 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 C30 22 38 8 60 8 C82 8 88 26 112 26 C136 26 142 4 168 4 C194 4 200 24 226 24 C252 24 258 12 284 12 L320 12" fill="none" stroke="#0b6fa4" stroke-width="2.5" stroke-linecap="round"/></svg>
           <p style="margin:6px 0 0;font-size:.78rem;color:var(--muted)">Illustrative example of the snapshot that will open every River Report.</p>
         </div>
       </div>
@@ -347,7 +347,7 @@
           </div>
         </article>
       </div>
-      <p class="sample-note"><strong>Mockup note:</strong> These are format examples for the launch site. The first full River Report will be written by hand after a real storm, once the underlying model checks are complete.</p>
+      <p class="sample-note"><strong>Note:</strong> These are format examples for the launch site. The first full River Report will be written by hand after a real storm, once the underlying model checks are complete.</p>
     </div>
   </section>
 
@@ -381,8 +381,8 @@
             <text x="330" y="242" font-size="11" fill="var(--muted)" font-family="IBM Plex Mono">+24 hours</text>
             <text x="610" y="242" font-size="11" fill="var(--muted)" font-family="IBM Plex Mono">+48 hours</text>
             <text x="8" y="40" font-size="11" fill="var(--muted)" font-family="IBM Plex Mono" id="yLabel">FLOW</text>
-            <path id="chartPath" fill="none" stroke="#0c6656" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d=""/>
-            <circle id="chartPeak" r="6" fill="#c97a12" stroke="#fff" stroke-width="2" cx="0" cy="0"/>
+            <path id="chartPath" fill="none" stroke="#0b6fa4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d=""/>
+            <circle id="chartPeak" r="6" fill="#0a7ca8" stroke="#fff" stroke-width="2" cx="0" cy="0"/>
             <text id="peakLabel" font-size="12" font-weight="600" fill="var(--ink)" font-family="IBM Plex Sans"></text>
           </svg>
         </div>
@@ -412,12 +412,12 @@
 
       <div style="height:22px"></div>
       <div class="indicators">
-        <div class="ind"><h3><span class="ind-dot" style="background:#176f7d"></span>Flow</h3><p>How much water is moving, and how fast, compared with normal for that spot.</p><p class="plain"><b>In plain terms:</b> Is the river running high, and is it still rising?</p></div>
-        <div class="ind"><h3><span class="ind-dot" style="background:#8a5a2b"></span>Turbidity</h3><p>How cloudy the water is from sediment and runoff carried in by rain.</p><p class="plain"><b>In plain terms:</b> Brown water = soil on the move.</p></div>
-        <div class="ind"><h3><span class="ind-dot" style="background:#0c6656"></span>Bank &amp; debris</h3><p>Fresh erosion, undercut banks, and the high-water debris line a storm leaves behind.</p><p class="plain"><b>In plain terms:</b> Where did the water reach — and what did it take with it?</p></div>
-        <div class="ind"><h3><span class="ind-dot" style="background:#2f7d4f"></span>Temperature</h3><p>Water temperature at the time of the visit, tracked across seasons.</p><p class="plain"><b>In plain terms:</b> Warm runoff stresses fish and stream life.</p></div>
+        <div class="ind"><h3><span class="ind-dot" style="background:#1b87b8"></span>Flow</h3><p>How much water is moving, and how fast, compared with normal for that spot.</p><p class="plain"><b>In plain terms:</b> Is the river running high, and is it still rising?</p></div>
+        <div class="ind"><h3><span class="ind-dot" style="background:#4a7d96"></span>Turbidity</h3><p>How cloudy the water is from sediment and runoff carried in by rain.</p><p class="plain"><b>In plain terms:</b> Brown water = soil on the move.</p></div>
+        <div class="ind"><h3><span class="ind-dot" style="background:#0b6fa4"></span>Bank &amp; debris</h3><p>Fresh erosion, undercut banks, and the high-water debris line a storm leaves behind.</p><p class="plain"><b>In plain terms:</b> Where did the water reach — and what did it take with it?</p></div>
+        <div class="ind"><h3><span class="ind-dot" style="background:#2e8fb8"></span>Temperature</h3><p>Water temperature at the time of the visit, tracked across seasons.</p><p class="plain"><b>In plain terms:</b> Warm runoff stresses fish and stream life.</p></div>
         <div class="ind"><h3><span class="ind-dot" style="background:#5b7fa6"></span>Rainfall total</h3><p>How much rain fell over the watershed, and over how many hours.</p><p class="plain"><b>In plain terms:</b> The cause, measured before the effect.</p></div>
-        <div class="ind"><h3><span class="ind-dot" style="background:#c97a12"></span>Life signs</h3><p>Fish, birds, insects, and other visible signs of stream life at the visit.</p><p class="plain"><b>In plain terms:</b> A healthy stream shows it.</p></div>
+        <div class="ind"><h3><span class="ind-dot" style="background:#0a7ca8"></span>Life signs</h3><p>Fish, birds, insects, and other visible signs of stream life at the visit.</p><p class="plain"><b>In plain terms:</b> A healthy stream shows it.</p></div>
       </div>
       <p style="margin-top:22px"><a class="read-link" href="#reports">See this research in action — read the River Reports →</a></p>
     </div>
@@ -482,9 +482,9 @@
       <div class="support">
         <div>
           <span class="kicker">How HydroSignal is structured</span>
-          <h2>Independent in name and work. Supported under a nonprofit umbrella.</h2>
-          <p>HydroSignal will operate through fiscal sponsorship under a <strong style="color:#fff">grant-relationship model</strong>: an established nonprofit receives donations earmarked for HydroSignal and passes them through as grants, while HydroSignal keeps its own name, website, and editorial control.</p>
-          <p>That structure lets a student-led project accept support and apply for grants credibly — without waiting to form a standalone corporation first.</p>
+          <h2>An Ohio nonprofit corporation. Support through a fiscal sponsor.</h2>
+          <p>HydroSignal was incorporated as an Ohio nonprofit corporation in November 2026. It is not yet a 501(c)(3) tax-exempt organization — its own exemption is a later step. For now, it will work with a fiscal sponsor under a <strong style="color:#fff">grant-relationship model</strong>: the sponsor receives donations earmarked for HydroSignal and passes them through as grants, while HydroSignal keeps its own name, website, and editorial control.</p>
+          <p>That structure lets a student-led project accept tax-deductible support and apply for grants credibly, while its own tax-exempt status is pursued as a separate step.</p>
           <span class="status-pill">Sponsor selection in progress — donations open once signed</span>
         </div>
         <div class="model-card">
@@ -519,7 +519,7 @@
         <div>
           <details open>
             <summary>Is HydroSignal a nonprofit?</summary>
-            <p>Not a standalone corporation — by design, for now. It will operate under a fiscal sponsor's nonprofit umbrella through a grant relationship, which provides tax-deductible giving and grant eligibility while HydroSignal stays independent in name and work.</p>
+            <p>Yes — HydroSignal was incorporated as an Ohio nonprofit corporation in November 2026. It is not yet a 501(c)(3) tax-exempt organization; its own exemption is a later step. Until then, it will operate under a fiscal sponsor's umbrella through a grant relationship, which provides a route for tax-deductible giving and grant eligibility while HydroSignal stays independent in name and work.</p>
           </details>
           <details>
             <summary>Where does the data come from?</summary>
@@ -542,8 +542,8 @@
 <footer>
   <div class="wrap foot">
     <div>
-      <b style="color:var(--ink);font-family:'IBM Plex Serif',serif">HydroSignal</b> · hydrosignal.org · River research, translated — and the advocacy that follows<br>
-      <span>Concept mockup — November 2026. Report cards above are format examples; the first full report follows a real storm.</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-4px;margin-right:5px"><path d="M12 2.9c0 0-5.9 6.7-5.9 10.6a5.9 5.9 0 1 0 11.8 0C17.9 9.6 12 2.9 12 2.9Z" style="fill:var(--teal)"/><circle cx="12" cy="15.7" r="1.1" fill="#fff"/><path d="M10.09 13.79a2.7 2.7 0 0 1 3.82 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M8.78 12.48a4.55 4.55 0 0 1 6.44 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><b style="color:var(--ink);font-family:'IBM Plex Serif',serif">HydroSignal</b> · hydrosignal.org · River research, translated — and the advocacy that follows<br>
+      <span>Report cards above are format examples; the first full report follows a real storm.</span>
     </div>
     <div>
       Photos: Cuyahoga River aerial via Advance Local · Cuyahoga Valley waterfall via NPCA · Field sampling via ACWA<br>
@@ -572,7 +572,7 @@
   var series = {
     rain: {
       title: 'Rainfall — the trigger',
-      color: '#176f7d', yLabel: 'RAIN',
+      color: '#1b87b8', yLabel: 'RAIN',
       d: 'M56 205 L120 200 L180 120 L215 55 L250 95 L300 175 L380 200 L470 208 L560 212 L690 214',
       peak: {x:215, y:55, label:'Heaviest rain · ~hour 6'},
       ro: [['Burst, not drizzle','What matters is intensity — a lot of rain in a few hours overwhelms soil and storm drains alike.'],
@@ -581,7 +581,7 @@
     },
     flow: {
       title: 'Flow — the river speeds up',
-      color: '#0c6656', yLabel: 'FLOW',
+      color: '#0b6fa4', yLabel: 'FLOW',
       d: 'M56 200 L140 196 L200 170 L260 95 L310 48 L370 70 L440 130 L520 175 L610 195 L690 202',
       peak: {x:310, y:48, label:'Flow peaks · ~hour 14'},
       ro: [['Peak lags the rain','Flow crests hours after the heaviest rain — the watershed needs time to collect and deliver water.'],
@@ -590,7 +590,7 @@
     },
     turbidity: {
       title: 'Turbidity — the river turns brown',
-      color: '#8a5a2b', yLabel: 'CLOUDY',
+      color: '#4a7d96', yLabel: 'CLOUDY',
       d: 'M56 202 L130 198 L190 150 L240 70 L285 38 L340 60 L420 120 L510 170 L610 195 L690 203',
       peak: {x:285, y:38, label:'Dirtiest water · ~hour 12'},
       ro: [['Sediment rides the rise','Turbidity often peaks just before flow does — the first surge picks up the loosest material.'],
